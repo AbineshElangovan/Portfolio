@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+body {
+  background-color: #000000;
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar matching original style */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: #00e5ff;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #000000;
+}
+
+.font-ubuntu {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.font-roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Section heading underline style */
+.title-underline {
+  position: relative;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 3.75rem;
+  padding-bottom: 1.25rem;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.title-underline::before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 180px;
+  height: 3px;
+  background: #ffffff;
+  transform: translateX(-50%);
+}
+
+.title-underline::after {
+  content: attr(data-sub);
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  font-size: 1.1rem;
+  color: #00e5ff;
+  padding: 0 8px;
+  background: #000000;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.title-dark::after {
+  background: #111111;
+}
+
+.title-black::before {
+  background: #000000;
+}
+
+.title-black::after {
+  background: #000000;
+}
